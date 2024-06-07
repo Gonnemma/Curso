@@ -27,7 +27,7 @@ if (x > 50) {
 } else if (x > 5) {
     do something
   } else {
-    do something 
+    do something
   }
 
 ---------------ARREGLOS:---------------
@@ -56,7 +56,7 @@ switch (expresión) {
         [break;]
 }
 
--------------WHILE:-------------            
+-------------WHILE:-------------
 *se puede usar break*
 let *index*:*number* = 0;
 while(index < x){
@@ -68,3 +68,18 @@ while(index < x){
 
 
 */
+var cadena = "Karen por favor aprobame";
+var vocales = [0, 0, 0];
+for (var contador = 0; contador < cadena.length; contador++) {
+    var letras = cadena[contador];
+    if (letras == "a") {
+        vocales[0]++;
+    }
+    else if (letras == "e") {
+        vocales[1]++;
+    }
+    else if (letras == "o") {
+        vocales[2]++;
+    }
+}
+console.log("La cantidad de letras a, e y o es: " + vocales[0] + vocales[1] + vocales[2]);
