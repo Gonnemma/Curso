@@ -1,0 +1,26 @@
+/*selector de tipos: se aplica a todas las etiquetas con el mismo nombre*/
+p {
+    color:blue;
+    font-size: 20px;
+}
+h1 {
+    color:blueviolet;
+    font-size: 30px;
+    background-color: orangered;
+}
+/*selector de clase: (se llama la clase con .clase*/
+.color-verde {
+    color:green
+}
+/*selector de identificacion: solo modifica la etiqueta que le damos el ID*/
+#especial {
+    color:yellow;
+    font-size: 50px;
+}
+body {
+    background-color: aqua;
+    background-image: url("../descarga.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

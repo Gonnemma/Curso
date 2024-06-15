@@ -1,18 +1,17 @@
-import fs from 'node:fs'
-let contenido: string = ""; 
-const nombre: string[]= ["Leche", "Galletitas", "Harina", "Queso"]
-const numeros: number[]= [1, 2, 3, 4]
-for (let i:number=0;i<nombre.length;i++){
-    contenido += `${nombre[i]} `
+import fs from 'fs';
+const productos: string[] = ["Leche", "Galletitas", "Harina", "Queso"];
+const precios: number[] = [525, 3500, 400, 1999];
+let productosTexto: string = "";
+for (let i = 0; i < productos.length; i++) {
+    productosTexto += productos[i] + " ";
 }
-for (let i:number=0;i<numeros.length;i++){
-    contenido += `${numeros[i]} `
+fs.writeFileSync('./productos.txt', productosTexto.trim());
+let preciosTexto: string = "";
+for (let i = 0; i < precios.length; i++) {
+    preciosTexto += precios[i].toString() + " ";
 }
-
-fs.writeFileSync('./test.txt', contenido);
-console.log("Finalizado.")
-
-const datos: string = fs.readFileSync('./test.txt', 'utf8');
-const datos2: string = datos.trim();
-const nuevoArray: string[] = datos2.split(" ");
-console.log(nuevoArray)
+fs.writeFileSync('./precios.txt', preciosTexto.trim());
+const datosProd = fs.readFileSync('./productos.txt', 'utf8');
+console.log("Productos: " + datosProd)
+const datosPrec = fs.readFileSync('./precios.txt', 'utf8');
+console.log("Precios: " + datosPrec)
